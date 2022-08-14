@@ -42,9 +42,9 @@ def get_ids(list_of_ids) -> list:
                     temp.add(list_of_ids[i])
                     combinations.append(temp)
         if num_items_per_combination == len(list_of_ids):
-            temp = []
+            temp = set()
             for j in range(len(list_of_ids)):
-                temp.append(list_of_ids[j])
+                temp.add(list_of_ids[j])
             combinations.append(temp)
         num_items_per_combination += 1
     return combinations
